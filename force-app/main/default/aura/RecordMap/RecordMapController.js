@@ -13,6 +13,8 @@
   },
 
   recordChangeHandler: function (component, event, helper) {
+    console.log("recordChangeHandler - 1", component);
+    console.log(helper);
     console.log("recordChangeHandler");
     var id = event.getParam("recordId");
     component.set("v.dsRecordId", id);
@@ -20,6 +22,7 @@
   },
 
   onRecordUpdated: function (component) {
+    console.log("onRecordUpdated - 1");
     console.log("onRecordUpdated");
     var sObject = component.get("v.sObject");
     if (sObject) {
